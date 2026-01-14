@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wood Frame</title>
+<link rel="icon" href="logo.png" type="image/png">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="marca">
+    <img src="logo.png">
+    <h1>WOOD FRAME</h1>
+  </div>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#sobre">Sobre Nosotros</a></li>
+    <li><a href="#productos">Diseños</a></li>
+    <li><a href="#planos">Planos</a></li>
+  </ul>
+</nav>
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <p class="hero-subtitle">Bienvenido a Wood Frame</p>
+    <h1 class="hero-title">La calidad de la naturaleza al alcance de la vista</h1>
+    <p class="hero-text">
+      Marcos de lentes fabricados en madera de bambu</p>
+      <p class="hero-text">¿Quien dijo que no se podia lucir bien mientras se salva al planeta?
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#productos" class="btn-primary">Explorar diseños</a>
+      <a href="#sobre" class="btn-secondary">Ver más</a>
+    </div>
+  </div>
+</section>
+
+
+</section>
+
+<section id="sobre" class="sobre">
+  
+  <div class="sobre-texto animar">
+    <span class="sobre-tag">Quiénes somos</span>
+    <h2 class="sobre-titulo">Nuestra misión y visión</h2>
+
+    <p class="sobre-parrafo">
+      Nuestra misión es desarrollar marcos biodegradables en bambú, combinando
+      diseño, resistencia y sostenibilidad en cada pieza.
+    </p>
+
+    <p class="sobre-parrafo">
+      Para el año 2030, buscamos consolidarnos como una marca líder en soluciones
+      ecológicas dentro de la industria óptica.
+    </p>
+  </div>
+
+  <!-- ORGANIGRAMA -->
+  <div class="organigrama animar">
+    
+    <div class="org-card">
+      <img src="subaru.jpeg" alt="Director General">
+      <span>CEO</span>
+      <p>Dirección general y visión estratégica</p>
+    </div>
+
+    <div class="org-card">
+      <img src="subaru.jpeg" alt="Producción">
+      <span>Producción</span>
+      <p>Fabricación y control de calidad</p>
+    </div>
+
+    <div class="org-card">
+      <img src="subaru.jpeg" alt="Diseño">
+      <span>Contaduria</span>
+      <p>Registros contables de la Empresa</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section id="productos" class="productos">
+
+  <div class="productos-grid">
+
+    <!-- COLUMNA 1 -->
+    <div class="producto-col animar">
+
+      <div class="producto">
+        <span class="producto-nombre">Marco Clásico</span>
+        <img src="marco3.jpeg">
+        <p class="producto-precio">$45.000 COP</p>
+        <button class="btn-comprar" onclick="abrirModal('Marco clasico')">
+          Comprar
+        </button>
+      </div>
+
+      <div class="beneficio">
+        <h4>Material ecológico</h4>
+        <p>Bambú biodegradable </p>
+      </div>
+
+    </div>
+
+    <!-- COLUMNA 2 -->
+    <div class="producto-col animar">
+
+      <div class="producto">
+        <span class="producto-nombre">Marco Minimalista</span>
+        <img src="marco2.jpeg">
+        <p class="producto-precio">$50.000 COP</p>
+        <button class="btn-comprar" onclick="abrirModal('Marco minimalista')">
+          Comprar
+        </button>
+      </div>
+
+      <div class="beneficio">
+        <h4>Económico</h4>
+        <p>Excelente relación calidad–precio</p>
+      </div>
+
+    </div>
+
+    <!-- COLUMNA 3 -->
+    <div class="producto-col animar">
+
+      <div class="producto">
+        <span class="producto-nombre">Marco Personalizable</span>
+        <img src="marco1.jpg">
+        <p class="producto-precio">$55.000 COP</p>
+        <button class="btn-comprar" onclick="abrirModal('Marco Personalizable')">
+          Comprar
+        </button>
+      </div>
+
+      <div class="beneficio">
+        <h4>Interés del público</h4>
+        <p>Personas interesadas: <span id="count-personalizable">0</span></p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="planos" class="planos">
+  <div class="contenedor-planos">
+    <div class="plano">
+      <span class="tag">OFICINAS</span>
+      <img src="plano1.png">
+      <h3>Plano de oficinas</h3>
+      <p>Edificio administrativo de dos pisos.</p>
+    </div>
+
+    <div class="plano">
+      <span class="tag">ALTURA</span>
+      <img src="plano2.png">
+      <h3>Plano en altura</h3>
+      <p>Altura total aproximada de 10 metros.</p>
+    </div>
+
+    <div class="plano">
+      <span class="tag">PRODUCCIÓN</span>
+      <img src="plano3.png">
+      <h3>Planta de producción</h3>
+      <p>Zona de corte, lijado y ensamblaje.</p>
+    </div>
+  </div>
+  <div class="acciones-planos animar">
+  <a href="https://youtu.be/WjoX_XeP_VE" target="_blank" class="btn-hero">
+    Ver recorrido interno
+  </a>
+</div>
+
+</section>
+
+
+<footer class="footer-sitio">
+  <div class="footer-linea"></div>
+
+  <div class="footer-contenido">
+    <div class="footer-seccion">
+      <h3>Créditos</h3>
+      <p>Diseñado y desarrollado por <strong>Wood Frame</strong></p>
+      <p>CEO: Nicolas Joya</p>
+      <p>CFO: Nicolas Pineda</p>
+      <p>CCC: Daivier Cardenas</p>
+    </div>
+
+    <div class="footer-seccion">
+      <h3>Contacto</h3>
+      <p>Teléfono:<br>
+        <a href="tel:+573204005807">+57 333 2929 778</a>
+      </p>
+      <p>Correo:<br>
+        <a href="mailto:nico.joya2010@gmail.com">nico.joya2010@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="footer-seccion">
+      <h3>Ubicación</h3>
+      <p>Bogotá, Colombia</p>
+      <p class="footer-copy">© 2026 Wood Frame</p>
+    </div>
+  </div>
+</footer>
+
+<div id="modalCompra" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarModal()">&times;</span>
+    
+    <h2>Confirmar Pedido</h2>
+    <p>Has seleccionado:</p>
+    <!-- Aquí el JS insertará el nombre -->
+    <h3 id="producto-nombre"></h3> 
+    
+    <p>Serás redirigido a WhatsApp para finalizar los detalles del pago y envío.</p>
+    
+    <a id="link-whatsapp" href="#" target="_blank" class="btn-confirmar">
+      Continuar a WhatsApp
+    </a>
+  </div>
+</div>
+  <!-- CHAT BOT -->
+<input type="checkbox" id="chat-toggle">
+<label for="chat-toggle" class="chat-boton">💬</label>
+
+<div class="chat-caja">
+  <div class="chat-header">Wood Frame Bot</div>
+  <div class="chat-body" id="chat-body">
+    <div class="msg bot">Hola, Soy Wood Bot. ¿En qué te puedo ayudar? (Misión, Visión, Precios, etc.)</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chat-input-text" placeholder="Escribe tu duda..." onkeypress="if(event.key === 'Enter') enviarMensaje()">
+    <button onclick="enviarMensaje()">Enviar</button>
+  </div>
+<script src="script.js"></script>
+
+
+</body>
+</html>

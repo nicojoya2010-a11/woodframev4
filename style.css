@@ -1,0 +1,863 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:black;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ================= NAV ================= */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 30px;
+  background:rgba(0,0,0,0.9);
+  z-index:100;
+}
+
+.marca{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.marca img{width:40px;}
+
+.navbar ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* ================= SECCIONES ================= */
+section{
+  min-height:90vh;
+  padding:120px 60px 60px;
+  display:flex;
+  align-items:center;
+}
+
+/* ================= ANIMACIONES ================= */
+.animar{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.8s ease;
+}
+.animar.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= INICIO ================= */
+.inicio{gap:300px;}
+.imagen img{width:500px; max-width:100%;}
+
+/* ================= SOBRE ================= */
+.sobre{
+  display:flex;
+  flex-direction:row-reverse;
+  gap:40px;
+}
+.sobre .texto{flex:1;}
+.sobre .imagen{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.ju {
+  font-size: 2.2rem;
+  /* Mantiene el desplazamiento a la izquierda (-50px) y sube el texto (-10px) */
+  transform: translate(-60px, -160px); 
+}
+
+.jul{font-size:2.5rem;}
+.mision{line-height:1.6;}
+
+/* ================= PRODUCTOS ================= */
+.productos{
+  flex-direction:column;
+  text-align:center;
+  gap:30px;
+}
+
+.productos-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+
+.producto{
+  background:#111;
+  padding:20px;
+  width:380px;
+  border-radius:12px;
+  border:1px solid #333;
+  transition:0.3s;
+}
+
+.producto:hover{
+  border-color:#c49a6c;
+  transform:translateY(-15px);
+}
+
+.producto img{
+  width:100%;
+  border-radius:8px;
+  margin-bottom:15px;
+}
+
+.btn-comprar{
+  background:#c49a6c;
+  color:black;
+  border:none;
+  padding:10px;
+  width:100%;
+  border-radius:5px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.btn-comprar:hover{background:#e0b484;}
+
+/* ================= PREGUNTAS ================= */
+.preguntas{justify-content:center;}
+
+.animara{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.titulo-seccion{
+  font-size:2.5rem;
+  margin-bottom:60px;
+}
+
+.pregunta-item{margin-bottom:40px;}
+.pregunta{font-size:1.4rem; margin-bottom:10px;}
+.respuesta{
+  max-width:700px;
+  margin:auto;
+  color:#ccc;
+  line-height:1.6;
+}
+
+/* ================================================= */
+/* ================= PLANOS (DEL SEGUNDO) ========== */
+/* ================================================= */
+.planos {
+  flex-direction: column;
+}
+
+/* grid intacto */
+.contenedor-planos {
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  margin: auto;
+  
+}
+
+/* tarjetas */
+.plano {
+  position: relative;
+  background: rgba(0,0,0,0.65);
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(196,154,108,0.35);
+  transition: 0.25s;
+}
+
+
+/* etiqueta */
+.tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(0,0,0,0.75);
+  color: #c49a6c;
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* texto inferior */
+.plano::after {
+  content: "App usada para los planos: Minecraft";
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  font-size: 0.7rem;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.plano img {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(196,154,108,0.35);
+}
+
+.plano h3 {
+  margin: 15px 0 8px;
+  color: #c49a6c;
+}
+
+.plano p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+
+.plano p{
+  font-size:0.95rem;
+  line-height:1.5;
+  color:#eaeaea;
+}
+#planos {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 0;
+  background: url("Bambu.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+/* Overlay oscuro */
+#planos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 0;
+}
+
+/* Elevar contenido */
+#planos > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ================= CHAT ================= */
+#chat-toggle{display:none;}
+
+.chat-boton{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:50px;
+  height:50px;
+  background:#0b4406;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:200;
+  font-size:24px;
+}
+
+.chat-caja{
+  position:fixed;
+  bottom:85px;
+  right:25px;
+  width:300px;
+  background:#1a1a1a;
+  border:1px solid #c49a6c;
+  border-radius:10px;
+  overflow:hidden;
+  opacity:0;
+  transform:translateY(20px);
+  pointer-events:none;
+  transition:0.3s;
+  z-index:200;
+}
+
+#chat-toggle:checked ~ .chat-caja{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
+.chat-header{
+  background:#c49a6c;
+  color:black;
+  padding:12px;
+  font-weight:bold;
+}
+
+.chat-body{
+  padding:15px;
+  height:250px;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.msg{
+  padding:8px 12px;
+  border-radius:8px;
+  max-width:85%;
+  word-wrap: break-word;
+  white-space: pre-wrap;     /* 👈 ESTA ES LA CLAVE */
+  line-height: 1.4;
+  font-size: 0.9rem;
+  word-break: normal;
+
+}
+
+
+.bot{background:#333; align-self:flex-start;}
+.user{background:#0b4406; align-self:flex-end;}
+
+.chat-input{
+  display:flex;
+  border-top:1px solid #333;
+}
+.chat-input input{
+  flex:1;
+  padding:10px;
+  border:none;
+  outline:none;
+  background:#222;
+  color:white;
+}
+.chat-input button{
+  padding:10px 15px;
+  border:none;
+  background:#c49a6c;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+.footer-sitio {
+  background: #0a0a0a;
+  padding: 30px 40px 40px;
+  position: relative;
+}
+
+
+/* Contenido */
+.footer-contenido {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* Columnas */
+.footer-seccion {
+  text-align: left; /* 👈 izquierda a derecha */
+}
+
+.footer-seccion h3 {
+  color: #c49a6c;
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.footer-seccion p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.footer-seccion a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-seccion a:hover {
+  color: #c49a6c;
+}
+
+/* Copyright más sutil */
+.footer-copy {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+
+
+
+
+.inicio-grid {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+#inicio {
+  min-height: 100vh;              /* Pantalla completa */
+  background-image: url("Bambu.png"); /* TU imagen */
+  background-size: cover;         /* Que cubra todo */
+  background-position: center;    /* Bien centrada */
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+#inicio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+#inicio > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(5px);
+  display: none; /* Oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  border: 2px solid #c49a6c;
+  position: relative;
+  animation: modalEntrada 0.4s ease;
+}
+
+@keyframes modalEntrada {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h2 { color: #c49a6c; margin-bottom: 15px; }
+.modal-content p { font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6; }
+
+.btn-confirmar {
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+.btn-confirmar:hover:hover { transform: scale(1.05); background: #20ba5a; }
+
+.cerrar-modal {
+  position: absolute;
+  top: 15px; right: 15px;
+  background: none; border: none;
+  color: white; font-size: 20px; cursor: pointer;
+}
+
+
+/* Animación de entrada */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón de cerrar (X) */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover { color: #000; }
+
+/* Nombre del producto destacado */
+#producto-nombre {
+  color: #2c3e50;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.hero {
+  min-height: 100vh;
+  background: url("Bambu.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: 80px;
+  padding: 40px;
+}
+.hero-subtitle {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c49a6c;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #c49a6c;
+  color: black;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  border: 1px solid white;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.sobre {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding: 120px 80px;
+  background: #000000;
+}
+
+/* Imagen */
+.sobre-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* Texto */
+.sobre-texto {
+  flex: 1;
+  max-width: 520px;
+}
+
+.sobre-tag {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c49a6c;
+  margin-bottom: 15px;
+}
+
+.sobre-titulo {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.sobre-parrafo {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 18px;
+}
+@media (max-width: 900px) {
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-texto {
+    max-width: 100%;
+  }
+
+  .sobre-img img {
+    max-width: 100%;
+  }
+  .sobre-img {
+  display: none;
+}
+
+}
+#sobre {
+  position: relative;
+  min-height: 100vh;
+  background: url("Bambu.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay oscuro */
+#sobre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Elevar contenido */
+#sobre > * {
+  position: relative;
+  z-index: 1;
+}
+.sobre {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  padding: 120px 80px;
+}
+
+/* ORGANIGRAMA */
+.organigrama {
+  display: flex;
+  gap: 25px;
+}
+
+.org-card {
+  width: 250px;
+  height: 300px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(196,154,108,0.4);
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.org-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.org-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.org-card span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c49a6c;
+  margin-bottom: 6px;
+}
+
+.org-card p {
+  font-size: 0.85rem;
+  color: #ddd;
+  line-height: 1.4;
+}
+@media (max-width: 900px) {
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .organigrama {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+#productos {
+  position: relative;
+  min-height: 100vh;
+  background: url("Bambu.png") center/cover no-repeat;
+  padding: 120px 80px;
+  text-align: center;
+}
+
+/* Overlay oscuro */
+#productos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Elevar contenido */
+#productos > * {
+  position: relative;
+  z-index: 1;
+}
+
+.productos-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.productos-layout {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start; /* 👈 evita estiramientos */
+}
+
+
+.producto {
+  width: 290px;
+  height: 420px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(196,154,108,0.4);
+  border-radius: 16px;
+  padding: 18px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.6);
+}
+
+.producto-nombre {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c49a6c;
+  margin-bottom: 10px;
+}
+
+.producto img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.producto-precio {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+.productos-info {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  
+}
+
+.beneficio {
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(196,154,108,0.35);
+  border-radius: 12px;
+  padding: 16px;
+  width: 280px;
+  text-align: left;
+}
+
+
+.beneficio h4 {
+  color: #c49a6c;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.beneficio p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+.producto-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 260px;
+}
+.acciones-planos {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Botón estilo hero */
+.btn-hero {
+  padding: 14px 34px;
+  border: 2px solid #c49a6c;
+  color: #000000;
+  background-color: #c49a6c;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+
